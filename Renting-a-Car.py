@@ -1,6 +1,6 @@
 import os
 
-# Simulando um sistema de aluguéis de carros
+# Simulando um sistema de aluguel de carros
 
 carros = [
         ("Chevrolet Tracker", 120),
