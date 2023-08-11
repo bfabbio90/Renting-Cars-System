@@ -1,6 +1,6 @@
 import os
 
-# Simulando um sistema de aluguel de carros
+# Simulando um sistema de aluguéis de carros
 
 carros = [
         ("Chevrolet Tracker", 120),
@@ -44,11 +44,12 @@ while True:
         os.system("cls")
         mostrar_lista_de_carros(carros)
 
+
     if op == 1:
         os.system("cls")
         mostrar_lista_de_carros(carros)
         print("")
-        print("Qual carro você deseja alugar?")
+        print("Qual carro você deseja alugar? Digite o código.")
         escolhido = int(input())
         print("Por quantos dias você deseja alugar o carro?")
         dias = int(input())
@@ -57,6 +58,7 @@ while True:
         print("Deseja continuar? Digite 0 para continuar / 1 para sair.")
         if int(input()) == 0:
             alugados.append(carros[escolhido][0])
+            carros.pop(escolhido)
             os.system('cls')
             print(f'Carro alugado: {carros[escolhido][0]}')
             print("")
@@ -75,4 +77,3 @@ while True:
     print("Deseja fazer mais alguma operação? (Digite 0 para continuar / 1 para sair.)")
     if int(input()) == 1:
         break
-
